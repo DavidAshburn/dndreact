@@ -1,24 +1,41 @@
-# README
+# react with jsx enabled
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+esbuild and tailwind
 
-Things you may want to cover:
+<div id="sheet" data-controller="react"></div> all you need in view
 
-* Ruby version
+yarn add react react-dom
 
-* System dependencies
+javascript/components
+holds our components
 
-* Configuration
+paste in " --loader:.js=jsx"
+inside package.json
+in the yarn build script for esbuild
 
-* Database creation
+rails_controller
+renders our sheet component
 
-* Database initialization
+import { Controller } from "@hotwired/stimulus";
+import React from "react";
+import { createRoot } from "react-dom/client";
+import Sheet from "../components/Sheet";
 
-* How to run the test suite
+our imports in react_controller need to bring in React and the components we have it render
 
-* Services (job queues, cache servers, search engines, etc.)
+Sheet.jsx
+import React, { useState } from 'react'
 
-* Deployment instructions
+function Sheet() {
 
-* ...
+    return (
+    <section>
+        <p>Loading all the stuff</p>
+    </section>
+    )
+
+}
+
+export default Sheet
+
+go to town
