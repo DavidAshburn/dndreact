@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .bord {
+    @apply border-4 border-red-500 rounded-sm;
+  }
+}
