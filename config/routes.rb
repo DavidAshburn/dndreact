@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'labels/classes'
   get 'labels/backgrounds'
   root 'home#index'
+
+  resources :races, param: :name, only: [ :show ]
+  resources :subraces, param: :name, only: [ :show ]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
